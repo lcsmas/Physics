@@ -1,0 +1,9 @@
+name: Deploy to gh-pages
+on: [push]
+jobs:
+  Deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: npm i && npm run deploy
